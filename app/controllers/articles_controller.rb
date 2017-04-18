@@ -3,10 +3,10 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.new(params[:article])
+    @article = Article.new(article_params)
 
     @article.save
-    redirect to @article
+    redirect_to @article
   end
 
 
